@@ -1,4 +1,5 @@
 import 'package:_03_islami/home/home_screen.dart';
+import 'package:_03_islami/intro_screen.dart';
 import 'package:_03_islami/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 
@@ -13,9 +14,11 @@ class Islami extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoutes.homeRouteName,
+      initialRoute: AppRoutes.introRouteName,
       routes: {
+        AppRoutes.introRouteName : (context) => IntroScreen(),
         AppRoutes.homeRouteName : (context) => HomeScreen(),
+
       },
     );
   }
